@@ -2,7 +2,7 @@
 ### Description
 A small utility package to flatten an arbitrarily nested array of values whilst gracefully handling strange or invalid inputs.
 ##### Assumptions: 
-  - There will be an unknown number of dimensions to the array.
+  - There will be an unknown depth to the array.
   - Any type of value is permitted as an item inside the nested arrays.
 
 ### Requirements
