@@ -32,7 +32,7 @@
       "^.+\\.[t|j]sx?$": "babel-jest"
     },
     "collectCoverageFrom": [
-      "src/**/*.ts",
+      "src/**/*.ts"
     ],
     "verbose": true
   },
