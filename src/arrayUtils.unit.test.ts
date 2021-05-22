@@ -1,3 +1,4 @@
+import { flatten } from './arrayUtils.js';
 
 describe('Array utility functions', () => {
   describe('Flatten', () => {
