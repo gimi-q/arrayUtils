@@ -1,12 +1,12 @@
-export const flatten = (arr: any[]) => {
+export const flatten = (items: any[]) => {
   let result = [];
-  
-  if (!Array.isArray(arr)) return result;
 
-  result = arr.reduce((acc, cur) => 
-    acc.concat(Array.isArray(cur) ? flatten(cur) : cur), []
-  );
+  const flattenEach = input =>
+    Array.isArray(input) ?
+      input.forEach(flattenEach)
+      : result.push(input);
+
+  Array.isArray(items) && flattenEach(items);
 
   return result;
 };
-
