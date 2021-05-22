@@ -28,3 +28,16 @@ export const expectedCases = [
   ],
   [['foo', ['bar']], ['foo', 'bar']],
 ];
+
+export const edgeCases = [
+  [null, []],
+  [undefined, []],
+  [{}, []],
+  [Math.ceil, []],
+  [1, []],
+  [false, []],
+  [true, []],
+  [2n ** 53n, []],
+  [Symbol("Sym"), []],
+];
+

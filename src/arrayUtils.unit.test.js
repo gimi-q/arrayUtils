@@ -1,5 +1,5 @@
 import { flatten } from './arrayUtils.js';
-import { expectedCases } from './arrayUtils.unit.fixtures.js';
+import { expectedCases, edgeCases } from './arrayUtils.unit.fixtures.js';
 
 describe('Array utility functions', () => {
   describe('Flatten', () => {
@@ -7,6 +7,8 @@ describe('Array utility functions', () => {
       expect(flatten(input)).toEqual(output);
     });
 
-    xit('should gracefully handle strange or invalid inputs', () => {});
+    it.each(edgeCases)('should gracefully handle strange or invalid inputs', (input, output) => {
+      expect(flatten(input)).toEqual(output);
+    });
   });
 });
